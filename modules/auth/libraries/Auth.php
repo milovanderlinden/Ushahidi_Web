@@ -116,9 +116,10 @@ class Auth_Core {
 		{
 			// Get the salt from the stored password
 			$salt = $this->find_salt($this->driver->password($username));
-
+			var_dump($salt);
 			// Create a hashed password using the salt from the stored password
 			$password = $this->hash_password($password, $salt);
+			var_dump($password);
 		}
 
 		return $this->driver->login($username, $password, $remember, $email);

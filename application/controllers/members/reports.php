@@ -721,7 +721,7 @@ class Reports_Controller extends Members_Controller {
 			{
 				if (!in_array($value,$stop_words) && !empty($value))
 				{
-					$chunk = mysql_real_escape_string($value);
+					$chunk = mysqli_real_escape_string($value);
 					if ($i > 0) {
 						$or = ' OR ';
 					}
